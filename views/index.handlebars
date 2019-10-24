@@ -1,0 +1,42 @@
+{{>header}}
+
+<main class="content">
+
+
+  <section id="videos">
+    {{#each video}}
+      {{> insertVideo}}
+    {{/each}}
+  </section>
+  </main>
+
+<button type="button" id="add-video-button"><i class="fa fa-plus"></i></button>
+
+  <div id="modal-backdrop" class="hidden"></div>
+  <div id="modal" class="hidden">
+    <div class="modal-content">
+
+    <div class="modal-header">
+      <h3>Add Video</h3>
+      <button type="button" id="modal-close" class="modal-hide-button">&times;</button>
+    </div>
+
+    <div class="modal-body">
+      <div class="video-input-element">
+        <label for="video-text-input">Title</label>
+        <input type="text" id="video-text-input"></input>
+      </div>
+
+      <div class="video-input-element">
+        <label for="video-source-input">Video URL</label>
+        <input type="text" id="video-source-input"></input>
+      </div>
+    </div>
+
+    <div class="modal-footer">
+      <button type="button" id="modal-cancel" class="modal-hide-button action-button">Cancel</button>
+      <button type="button" id="modal-accept" class="action-button">Upload Video</button>
+    </div>
+
+    </div>
+  </div>
